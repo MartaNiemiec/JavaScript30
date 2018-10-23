@@ -5,7 +5,7 @@
   <title>Scoped CSS Variables and JS</title>
 </head>
 <body>
-  <h2>Update CSS Variables with <span class='hl'>JS</span></h2>
+  <h2>Update <span class="css"> CSS</span> Variables with <span class='hl'>JS</span></h2>
 
   <div class="controls">
     <label for="spacing">Spacing:</label>
@@ -22,9 +22,27 @@
 
   <style>
 
+    /* we have to add "name="variableName" to the html elements to get access to them by document.documentElement.style.setProperty(``--${this.name}`, this.value + suffix`)*/
+    /* :root = <html> element  */
+    :root { 
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 10px;
+    }
+
     /*
       misc styles, nothing to do with CSS variables
     */
+
+    img {
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
+
+    .hl {
+      color: var(--base);
+    }
 
     body {
       text-align: center;
@@ -45,6 +63,27 @@
   </style>
 
   <script>
+
+    const inputs = document.querySelectorAll('.controls input');
+
+    function handleUpdate() {
+      const suffix = this.dataset.sizing || ''; // dataset.sizing is from <input...data-sizing="px"> // input for color doesn't have data so we have to add "|| ''" to avoid addition "undefined" in the end 
+
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);  
+      // style.setProperty(propertyName, value, priority); // (`--${this.name}`, this.value + suffix) -> (--blur, 10px) 
+      // The .documentElement property returns the documentElement of the document, as an Element object. For HTML documents the returned object is the <html> element. 
+      // So those properties will be added to <html style="--spacing: 10px; --blur: 10px; --base:#53a8ac;"> -> so it will change :root { ... } in CSS
+    
+      const color = document.querySelector("#base");
+      const cssSpan = document.querySelector(".css");
+      cssSpan.style.setProperty("color", color.value);
+    }
+     
+    inputs.forEach(input => input.addEventListener('change', handleUpdate));
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+
+
+
   </script>
 
 </body>
