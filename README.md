@@ -8,3 +8,5 @@
  #03 - CSS Variables [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/03-CSS_Variables/index.html)
 
  #04 - Array Cardio Day 1 [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/04-Array_Cardio_Day_1/index.html)
+
+ #05 - Flex Panel Gallery [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/05-Flex_Panel_Gallery/index.html)
