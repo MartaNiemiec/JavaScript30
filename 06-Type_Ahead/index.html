@@ -17,13 +17,15 @@
 <script>
 const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
 
+// array with cities data from the json file(endpoint)
 const cities = [];
 
-// fetch return a promise
+// "fetch" return a promise
 fetch(endpoint)
 .then(response => response.json())
 .then(data => cities.push(...data));  // push data into cities array witch spread operator
 
+// find city or state in the cities array
 function findMatches(wordToMatch, cities) {
   return cities.filter(place => {
     // here we need to figure out if the city or state matches what was searched
@@ -37,6 +39,7 @@ function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 }
 
+// display results of the search input with highlighted inputted text
 function displayMatches() {
   const matchArray = findMatches(this.value, cities);
   const html = matchArray.map(place => {
