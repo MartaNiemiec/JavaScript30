@@ -15,3 +15,5 @@
 
 
  #07 - Array Cardio Day 2 [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/07-Array_Cardio_Day_2/index.html)
+
+ #08 - Fun with HTML5 Canvas [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/08-Fun_with_HTML5_Canvas/index.html)
