@@ -12,3 +12,6 @@
  #05 - Flex Panel Gallery [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/05-Flex_Panel_Gallery/index.html)
 
  #06 - Type Ahead [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/06-Type_Ahead/index.html)
+
+
+ #07 - Array Cardio Day 2 [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/07-Array_Cardio_Day_2/index.html)
