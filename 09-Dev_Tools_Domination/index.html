@@ -17,29 +17,78 @@
       p.style.fontSize = '50px';
     }
 
+    // When we don't know why somethin is happend with javascript (eg. onClick="makeGreen()") we can inspect it, find in the DOM (here is <p></p>), right click->Break on->attribute modificaions and then clicking it on the page it's going start debugger and pause exactly where the <p> is and line of code which is causing those changes
+
     // Regular
+    console.log('hello');
+    console.table(dogs);
 
     // Interpolated
+    console.log('Hello I am a %s string', 'cool');  // 'cool' -> '%s' like a variable ('Hello I am a cool string')
+    // console.log(`Hello I am a ${var} string`);
 
     // Styled
+    console.log('%c Styled text', 'font-size:20px; background: red; text-shadow: 5px 5px 5px blue');
 
     // warning!
+    console.warn('Warn text!');
 
     // Error :|
+    console.error('Error text!');
 
     // Info
+    console.info('Info text');
 
     // Testing
+    console.assert(1 === 1, 'That is wrong'); //..will not show (it's true)
+    const p = document.querySelector('p');
+
+    console.assert(p.classList.contains('ouch'), 'That is wrong!');  //Assertion failed: That is wrong!
 
     // clearing
+    console.clear();  // good at the end of javascript code
 
     // Viewing DOM Elements
+    console.log(p);   //<p onclick="makeGreen()">×BREAK×DOWN×</p>
+    console.dir(p);   // dropdown showing all properties and methods of the element
 
     // Grouping together
+    dogs.forEach(dog => {
+      console.group(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      console.groupEnd(`${dog.name}`);
+    })
+
+      dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      console.groupEnd(`${dog.name}`);
+    })
 
     // counting
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Steve');
 
     // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/users/wesbos')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data'); // fetching data: 10.218994140625ms
+        console.log(data);
+      });
 
   </script>
 </body>
