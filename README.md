@@ -19,3 +19,5 @@
  #08 - Fun with HTML5 Canvas [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/08-Fun_with_HTML5_Canvas/index.html)
 
  #09 - Dev Tools Domination [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/09-Dev_Tools_Domination/index.html)
+
+ #10 - Hold Shift and Check Checkboxes [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/10-Hold_Shift_and_Check_Checkboxes/index.html)
