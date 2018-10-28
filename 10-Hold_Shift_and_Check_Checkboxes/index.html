@@ -99,6 +99,61 @@
   </div>
 
 <script>
+// let inputClicked = 0;
+// const multiSelect = (e) => {
+//   if (e.keyCode === 16) {
+//     console.log('yes')
+//   }
+// }
+
+// const selectItem = (e) => {
+// if (e.target = 'input') {
+//   inputClicked++;
+//   console.log(inputClicked);
+// } else {
+//   inputClicked--;
+//   console.log(e);
+// }
+// }
+
+// window.addEventListener('click', selectItem)
+
+
+// seleck all checkboxes
+const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
+
+// last checked input   
+let lastChecked;
+
+function handleCheck(e) {
+  // Check if they had the shift key down
+  // Check that they are checking it (not unchecking)
+  let inBetween = false;
+  if (e.shiftKey && this.checked) {
+    // go ahead and do what we please
+    // AND look over every single checkbox and find the first which was checked and then check every single input, set inBetween to true and continue until goes to the lastChecked and stop setting inBetween to true
+    checkboxes.forEach(checkbox => { 
+      // where the loop is starting and finishing
+      if (checkbox === this || checkbox === lastChecked)  {
+        inBetween = !inBetween; // setting inBetween to true when the input is between this.checkbox and lastChecked
+      };
+
+      // when inBetween=true then set the input as checked
+      if (inBetween) {
+        checkbox.checked = true;
+      };
+    
+    });
+
+  }
+
+  lastChecked = this;
+} 
+
+//listen for click checkbox
+checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));  // 'click' is fired even when is used a keybord
+
+
 </script>
 </body>
 </html>
