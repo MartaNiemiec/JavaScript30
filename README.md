@@ -23,3 +23,7 @@
  #10 - Hold Shift and Check Checkboxes [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/10-Hold_Shift_and_Check_Checkboxes/index.html)
 
  #11 - Custom Video Player [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/11-Custom_Video_Player/index.html)
+
+ #12 - Key Sequence Detection [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/12-Key_Sequence_Detection/index.html)
+
+ #13 - Slide in on Scroll  [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/13-Slide_in_on_Scroll/index.html)
