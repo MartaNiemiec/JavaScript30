@@ -22,6 +22,9 @@
     <form class="add-items">
       <input type="text" name="item" placeholder="Item Name" required>
       <input type="submit" value="+ Add Item">
+      <input type="button" data-all="checkAll" value="&#10004; all">
+      <input type="button" data-all="uncheckAll"value="&#9744; all">
+      <input type="button" data-all="deleteAll" value="&#10006; Delete all">
     </form>
   </div>
 
@@ -29,6 +32,7 @@
   const addItems = document.querySelector('.add-items');  // <form>
   const itemsList = document.querySelector('.plates');  // <ul>
   const items = JSON.parse(localStorage.getItem('items')) || [];  // on page load from local storage JSON try to get a string and with .parse put it back to the whatever it was initially (here an array witch objects) 
+  
 
   function addItem(e) {
     e.preventDefault(); // stop the page from reloading
@@ -40,14 +44,10 @@
       done: false
     };
 
-
    // ADD item to the items array
     items.push(item);
 
-    populateList(items, itemsList); // everytime we add an item this function is recreating the entire list / performance issue but here it's fast / react or angular can help with this 
-
-    //LOCAL STORAGE
-    localStorage.setItem('items', JSON.stringify(items));  // JSON.stringify converts objects in the array into a string
+    updateLists();
 
    // CLEAR input
     this.reset() // this=form element, reset() is the form's method
@@ -58,7 +58,6 @@
   // plates=[] to doesn't break the code when we forget to pass in something 
   // platesList is the place to put html (to the itemsList)
   function populateList(plates = [], platesList) { 
-    // 
     platesList.innerHTML = plates.map((plate, i) => { 
       // input's "id" and label's "for" connect eachother
       return `  
@@ -70,28 +69,51 @@
     }).join('');  // map returns an array but for  innerHTML we need one string so we use .join() which turn an array into the one big string
   }
 
+
+// update list and local storage
+  function updateList() {
+  // Update it on the page
+    populateList(items, itemsList); // everytime we add an item this function is recreating the entire list / performance issue but here it's fast / react or angular can help with this 
+
+  // Update LOCAL STORAGE
+    localStorage.setItem('items', JSON.stringify(items));  // JSON.stringify converts objects in the array into a string
+  }
+
+
 // TOGGLE DONE where we listen for a click on something higher (parent element) then inside of it we check if it's actually thing that we want 
   function toggleDone(e) {
-    if(!e.target.matches('input')) return;  // skip this unless it,s an input so whereever we click we get <input> chechbox
+    if(!e.target.matches('input')) return;  // skip this unless it's an input so whereever we click we get <input> checkbox
     const el = e.target;
     const index = el.dataset.index;
     //change the property "done"
     items[index].done = !items[index].done;
-    //store it in a local storage
-    localStorage.setItem('items', JSON.stringify(items));  
-    // update it on the page
-    populateList(items, itemsList);
+
+    updateList();
+  }
+
+
+  function listChanges(e) {
+    const dataAll = e.target.dataset.all;
+    
+    if (dataAll === "checkAll") {
+      items.map(item => item.done = true);
+    } else if (dataAll === "uncheckAll"){
+      items.map(item => item.done = false);
+    } else if (dataAll === "deleteAll") {
+      items.splice(0, items.length);
+    }
+    
+    updateList();
   }
    
 
   addItems.addEventListener('submit', addItem);
-  itemsList.addEventListener('cick', toggleDone);
+  itemsList.addEventListener('click', toggleDone);
+  addItems.addEventListener('click', listChanges)
 
   populateList(items, itemsList);
 
 // LOCAL STORAGE we can see in DevTool/Application/Local Storage
-
-
 
 
 </script>
