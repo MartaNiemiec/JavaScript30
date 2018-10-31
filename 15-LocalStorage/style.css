@@ -59,12 +59,14 @@
     }
 
     .plates input + label:before {
-      content: '⬜️';
+      content: '\2610';
+      color: orange;
       margin-right: 10px;
     }
 
     .plates input:checked + label:before {
-      content: '🌮';
+      content: '\1f374';
+      color: orange;
     }
 
     .add-items {
