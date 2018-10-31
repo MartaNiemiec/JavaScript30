@@ -81,7 +81,7 @@
       transition: all 0.2s;
     }
 
-    .add-items input:not([type=text]) {
+    .add-items input {
       background-color: white;
     }
 

@@ -47,10 +47,10 @@
    // ADD item to the items array
     items.push(item);
 
-    updateLists();
+    updateList();
 
    // CLEAR input
-    this.reset() // this=form element, reset() is the form's method
+    this.reset(); // this=form element, reset() is the form's method
   }
 
 
@@ -97,7 +97,7 @@
     
     if (dataAll === "checkAll") {
       items.map(item => item.done = true);
-    } else if (dataAll === "uncheckAll"){
+    } else if (dataAll === "uncheckAll") {
       items.map(item => item.done = false);
     } else if (dataAll === "deleteAll") {
       items.splice(0, items.length);
@@ -105,17 +105,15 @@
     
     updateList();
   }
-   
 
+   
   addItems.addEventListener('submit', addItem);
   itemsList.addEventListener('click', toggleDone);
-  addItems.addEventListener('click', listChanges)
-
+  addItems.addEventListener('click', listChanges);
+  
   populateList(items, itemsList);
 
 // LOCAL STORAGE we can see in DevTool/Application/Local Storage
-
-
 </script>
 
 
