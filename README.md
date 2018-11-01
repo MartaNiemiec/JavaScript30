@@ -33,3 +33,5 @@
  #15 - Local Storage [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/15-LocalStorage/index.html)
 
  #16 - Mouse Move Shadow [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/16-Mouse_Move_Shadow/index.html)
+
+ #17 - Sort Without Articles [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/17-Sort_Without_Articles/index.html)
