@@ -46,6 +46,21 @@
 <script>
 const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
 
+// remove a/the/an at the beginning of the band name
+function strip(bandName) {
+  return bandName.replace(/^(a |the |an )/i, '').trim();   //trim() removes whitespace from both sides of a string
+}
+
+
+const sortedBands = bands.sort((a, b) => strip(a) > strip(b) ? 1 : -1);
+
+// update html
+document.querySelector('#bands').innerHTML =
+  sortedBands
+    .map(band => `<li>${band}</li>`)
+    .join('');  // return an array without commas (using toString() by default it's gonna put comma between each item)
+
+console.log(sortedBands);
 
 </script>
 
