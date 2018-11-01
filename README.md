@@ -26,8 +26,10 @@
 
  #12 - Key Sequence Detection [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/12-Key_Sequence_Detection/index.html)
 
- #13 - Slide in on Scroll  [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/13-Slide_in_on_Scroll/index.html)
+ #13 - Slide in on Scroll [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/13-Slide_in_on_Scroll/index.html)
 
- #14 - JavaScript References VS Copying  [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/14-JavaScript_References_VS_Copying/index.html)
+ #14 - JavaScript References VS Copying [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/14-JavaScript_References_VS_Copying/index.html)
 
- #15 - Local Storage  [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/15-LocalStorage/index.html)
+ #15 - Local Storage [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/15-LocalStorage/index.html)
+
+ #16 - Mouse Move Shadow [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/16-Mouse_Move_Shadow/index.html)
