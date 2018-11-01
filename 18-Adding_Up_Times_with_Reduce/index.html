@@ -181,7 +181,28 @@
       Video 58
     </li>
   </ul>
+
 <script>
+
+  const timeNodes = Array.from(document.querySelectorAll('[data-time]')); // Array.from() converts  nodelist to array
+  // const timeNodes = [...document.querySelectorAll([data-time])];
+  const seconds = timeNodes
+  .map(node => node.dataset.time) // transform an array of items to an array of strings
+  .map(timeCode => {  // turn every item/string into seconds
+    const [mins, secs] = timeCode.split(':').map(parseFloat); // parseFloat chenges strings into numbers
+    return (mins * 60) + secs;
+  })
+  .reduce((total, vidSeconds) => total + vidSeconds);
+
+  let secondsLeft = seconds;  // 17938
+
+  const hours = Math.floor(secondsLeft / 3600);   // 4
+  secondsLeft = secondsLeft % 3600;   // 3538
+
+  const mins = Math.floor(secondsLeft / 60);  // 58
+  secondsLeft = secondsLeft % 60; // 58
+
+  console.log(`${hours}h ${mins}m ${secondsLeft}s`);
 </script>
 </body>
 </html>
