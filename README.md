@@ -41,3 +41,5 @@
  #19 - Webcam Fun [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/19-Webcam_Fun/index.html)
 
  #20 - Speech Detection [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/20-Speech_Detection/index.html)
+
+ #21 - Geolocation [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/21-Geolocation/index.html)
