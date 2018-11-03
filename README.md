@@ -39,3 +39,5 @@
  #18 - Adding Up Times with Reduce [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/18-Adding_Up_Times_with_Reduce/index.html)
 
  #19 - Webcam Fun [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/19-Webcam_Fun/index.html)
+
+ #20 - Speech Detection [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/20-Speech_Detection/index.html)
