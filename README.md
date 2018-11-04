@@ -13,7 +13,6 @@
 
  #06 - Type Ahead [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/06-Type_Ahead/index.html)
 
-
  #07 - Array Cardio Day 2 [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/07-Array_Cardio_Day_2/index.html)
 
  #08 - Fun with HTML5 Canvas [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/08-Fun_with_HTML5_Canvas/index.html)
@@ -47,3 +46,5 @@
  #22 - Follow Along Link Highlighter [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/22-Follow_Along_Link_Highlighter/index.html)
 
  #23 - Speech Synthesis [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/23-Speech_Synthesis/index.html)
+
+ #24 - Sticky Nav [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/24-Sticky_Nav/index.html)
