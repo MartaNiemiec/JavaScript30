@@ -45,3 +45,5 @@
  #21 - Geolocation [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/21-Geolocation/index.html)
 
  #22 - Follow Along Link Highlighter [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/22 -Follow_Along_Link_Highlighter/index.html)
+
+ #23 - Speech Synthesis [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/23-Speech_Synthesis/index.html)
