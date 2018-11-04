@@ -48,3 +48,5 @@
  #23 - Speech Synthesis [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/23-Speech_Synthesis/index.html)
 
  #24 - Sticky Nav [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/24-Sticky_Nav/index.html)
+
+ #25 - Event Capture, Propagation, Bubbling and Once [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/25-Event_Capture,Propagation,Bubbling_and_Once/index.html)
