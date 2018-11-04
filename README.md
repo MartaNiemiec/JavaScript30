@@ -43,3 +43,5 @@
  #20 - Speech Detection [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/20-Speech_Detection/index.html)
 
  #21 - Geolocation [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/21-Geolocation/index.html)
+
+ #22 - Follow Along Link Highlighter [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/22 -Follow_Along_Link_Highlighter/index.html)
