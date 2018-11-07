@@ -54,3 +54,5 @@
  #26 - Stripe Follow Along Nav [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/26-Stripe_Follow_Along_Nav/index.html)
 
  #27 - Click and Drag [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/27-Click_and_Drag/index.html)
+
+ #28 - Video Speed Controller [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/28-Video_Speed_Controller/index.html)
