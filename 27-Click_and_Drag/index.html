@@ -35,6 +35,37 @@
   </div>
 
 <script>
+
+  const slider = document.querySelector('.items');
+  let isDown = false; // a flag variable
+  let startX;
+  let scrollLeft;
+
+  function mouseLeaveAndUp () {
+    isDown = false;
+    slider.classList.remove('active');
+  }
+
+  function mouseDown (e) {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft; // The scrollLeft property sets or returns the number of pixels an element's content is scrolled horizontally. ( scrollTop is for vertical scroll)
+  }
+
+  function mouseMove (e) {
+    if (!isDown) return;  // stop the fn from running
+    e.preventDefault(); 
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 3;  // for every px moved we scroll the slider 3px
+    slider.scrollLeft = scrollLeft - walk;
+  }
+
+  slider.addEventListener('mousedown', mouseDown);
+  slider.addEventListener('mouseleave', mouseLeaveAndUp);
+  slider.addEventListener('mouseup', mouseLeaveAndUp);
+  slider.addEventListener('mousemove', mouseMove);
+
 </script>
 
   </body>

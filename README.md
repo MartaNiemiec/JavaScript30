@@ -52,3 +52,5 @@
  #25 - Event Capture, Propagation, Bubbling and Once [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/25-Event_Capture,Propagation,Bubbling_and_Once/index.html)
  
  #26 - Stripe Follow Along Nav [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/26-Stripe_Follow_Along_Nav/index.html)
+
+ #27 - Click and Drag [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/27-Click_and_Drag/index.html)
