@@ -58,3 +58,5 @@
  #28 - Video Speed Controller [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/28-Video_Speed_Controller/index.html)
 
  #29 - Countdown Timer [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/29-Countdown_Timer/index.html)
+
+ #30 - Whack A Mole [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/30-Whack_A_Mole/index.html)

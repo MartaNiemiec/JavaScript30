@@ -37,6 +37,60 @@
   const scoreBoard = document.querySelector('.score');
   const moles = document.querySelectorAll('.mole');
 
+  let lastHole;
+  let timeUp = false;
+  let score = 0;
+
+
+  function randomTime(min, max) {
+    return Math.round(Math.random() * (max - min) + min);
+  }
+
+
+  function randomHole(holes) {
+    const idx = Math.floor(Math.random() * holes.length);
+    const hole = holes[idx];
+    // if last hole is the same as the new one generated
+    if (hole === lastHole) {
+      console.log('Ah nah thats the same one bud');
+      return randomHole(holes);
+    }
+    lastHole = hole;
+    return hole;
+  }
+
+
+  function peep() {
+    const time = randomTime(200, 1000);
+    const hole = randomHole(holes);
+    hole.classList.add('up');
+    setTimeout(() => {
+      hole.classList.remove('up');
+      if (!timeUp) peep();  // if timeout = false
+    }, time);
+  }
+
+
+  function startGame() {
+    scoreBoard.textContent = 0; // reset score
+    timeUp = false;
+    score = 0;
+    peep();
+    setTimeout(() => timeUp = true, 10000)
+  }
+
+
+  function bonk(e) {
+    // e.isTrusted = true when we click on the object and false when we failed
+    if(!e.isTrusted) return; // cheater! // when somebody want to fake the click
+    score++;
+    this.parentNode.classList.remove('up');
+    scoreBoard.textContent = score;
+  }
+
+
+  moles.forEach(mole => mole.addEventListener('click', bonk));
+
 </script>
 </body>
 </html>
