@@ -56,3 +56,5 @@
  #27 - Click and Drag [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/27-Click_and_Drag/index.html)
 
  #28 - Video Speed Controller [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/28-Video_Speed_Controller/index.html)
+
+ #29 - Countdown Timer [:arrow_forward:](https://martaniemiec.github.io/JavaScript30/29-Countdown_Timer/index.html)
